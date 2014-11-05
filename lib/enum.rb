@@ -1,3 +1,3 @@
-require './enum/arrays'
-require './enum/hashes'
-require './enum/nested'
+require 'enum/arrays'
+require 'enum/hashes'
+require 'enum/nested'
