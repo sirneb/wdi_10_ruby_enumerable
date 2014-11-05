@@ -1,7 +1,7 @@
 require './spec/spec_helper.rb'
 require_relative '../lib/enum'
 
-RSpec.describe 'array methods' do
+RSpec.describe Array do
   before(:each) do
     test_array = [1, 2, 3, 7, 10, 1.1, 'ruby', 'python', false, 'Boston', 'New York', 'General Assembly', 17]
     @array = Array.new(test_array)
