@@ -3,8 +3,6 @@ require_relative '../lib/enum'
 
 RSpec.describe MyEnumeration do
 
-
-
   # Refer to: all?
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-all-3F
   describe '#all_words_long_than_length?' do
@@ -19,7 +17,6 @@ RSpec.describe MyEnumeration do
       expect(my_enum.all_words_long_than_length?(8)).to be false
     end
   end
-
 
   # Refer to: any?
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-any-3F
