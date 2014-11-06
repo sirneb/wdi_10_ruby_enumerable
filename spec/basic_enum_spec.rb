@@ -111,4 +111,15 @@ RSpec.describe MyEnumeration do
       expect(my_enum.drop_until_its_hot).to eq ['hot', 'medium', 'chilly']
     end
   end
+
+  # Refer to each_slice
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-each_slice
+  describe '#groups_of' do
+    it 'splits elements into groups of x size, with remaining elements in smaller set' do
+      my_enum = MyEnumeration.new(['Anna', 'David', 'Chris', 'Kate', 'Dan', 'Tom', 'Karen', 'Emily', 'Dannie', 'Kel'])
+      expect(my_enum.groups_of(2)).to eq([["Anna", "David"], ["Chris", "Kate"], ["Dan", "Tom"], ["Karen", "Emily"], ["Dannie", "Kel"]])
+      expect(my_enum.groups_of(3)).to eq [["Anna", "David", "Chris"], ["Kate", "Dan", "Tom"], ["Karen", "Emily", "Dannie"], ["Kel"]]
+      expect(my_enum.groups_of(4)).to eq [["Anna", "David", "Chris", "Kate"], ["Dan", "Tom", "Karen", "Emily"], ["Dannie", "Kel"]]
+    end
+  end
 end

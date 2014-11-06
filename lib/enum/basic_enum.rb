@@ -72,6 +72,13 @@ class MyEnumeration
   end
 
 
+  # Refer to each_slice
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-each_slice
+  # Tip: After .each_slice chain on .to_a to turn the returned Enumerator into an array
+  def groups_of(num)
+    collection.each_slice(num).to_a
+  end
+
   private
 
   def collection
