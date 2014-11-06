@@ -3,13 +3,14 @@ require_relative '../lib/enum'
 
 RSpec.describe People do
   before(:each) do
+    @rubyist = Person.new(name: "Jamal", age: 78, gender: 'male', years_language_experience: {java: 3, perl: 6, clojure: 3, ruby: 4}, favorite_foods: [:korean, :pizza, :american])
     test_nesting = [
       Person.new(name: "Chris", age: 31, gender: 'queer', years_language_experience: {ruby: 3, python: 6, perl: 10} , favorite_foods: [:sushi, :greek]),
       Person.new(name: "Ryan", age: 42, gender: 'male', years_language_experience: {c: 3, java: 6}, favorite_foods: [:thai, :pizza]),
       Person.new(name: "Anne", age: 19, gender: 'female', years_language_experience: {haskell: 3, erlang: 6}, favorite_foods: [:soylent, :pizza, :french]),
       Person.new(name: "Kee", age: 24, gender: 'female', years_language_experience: {lisp: 3, javascript: 6, fortran: 12}, favorite_foods: [:sushi, :german]),
       Person.new(name: "Jamie", age: 22, gender: 'queer', years_language_experience: {scheme: 3, assembly: 6, c: 10}, favorite_foods: [:indian, :italian]),
-      Person.new(name: "Jamal", age: 78, gender: 'male', years_language_experience: {java: 3, perl: 6, clojure: 3, ruby: 4}, favorite_foods: [:korean, :pizza, :american])
+      @rubyist
     ]
     @people = People.new(test_nesting)
   end

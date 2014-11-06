@@ -34,10 +34,16 @@ class People
   end
 
   def favorite_food_frequency
-    people.map(&:favorite_foods).flatten.each_with_object(Hash.new(0)) { |food, frequency| frequency[food] += 1 }
+    people
+      .map(&:favorite_foods)
+      .flatten
+      .each_with_object(Hash.new(0)) { |food, frequency| frequency[food] += 1 }
 
     # Alternate solution functionally:
-    # people.map(&:favorite_foods).flatten.reduce(Hash.new) { |food, count| food.update(count => food.fetch(count, 0) + 1) }
+    people
+      .map(&:favorite_foods)
+      .flatten
+      .reduce(Hash.new) { |food, count| food.update(count => food.fetch(count, 0) + 1) }
   end
 
   def total_combined_years_language_experience(language)
@@ -45,6 +51,19 @@ class People
       .map(&:years_language_experience)
       .map{|experience| experience[language] || 0 }
       .inject(:+)
+  end
+
+  def person_with_most_experience_in_language(language)
+    # people
+    # .map(&:years_language_experience)
+    # .map{|experience| experience[language] || 0 }
+    # .max
+
+    people
+      .inject(people[0].years_language_experience[language]) do |experience, max|
+        experience > max ? experience : max
+      end
+
   end
 
   private

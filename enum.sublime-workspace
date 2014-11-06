@@ -1,0 +1,502 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ruby",
+				"rubyist"
+			],
+			[
+				"favorite",
+				"favorite_foods"
+			],
+			[
+				"people",
+				"people_array"
+			],
+			[
+				"agro",
+				"agro_monsters"
+			],
+			[
+				"has_",
+				"has_agro_monsters"
+			],
+			[
+				"respon",
+				"respond_to"
+			],
+			[
+				"damage",
+				"damage_potential"
+			],
+			[
+				"solution",
+				"solution_four"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"question",
+				"question-6"
+			],
+			[
+				"aler",
+				"alertClicked"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 66,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/nested_spec.rb",
+			"settings":
+			{
+				"buffer_size": 2701,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 590,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/enum/nested.rb",
+			"settings":
+			{
+				"buffer_size": 1281,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/rspec.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"mv",
+				"File: Move"
+			],
+			[
+				"mo",
+				"File: Move"
+			],
+			[
+				"mov",
+				"File: Move"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/davidfisher/Code/GeneralAssembly/enumerable_lab",
+		"/Users/davidfisher/Code/GeneralAssembly/enumerable_lab/lib",
+		"/Users/davidfisher/Code/GeneralAssembly/enumerable_lab/lib/enum",
+		"/Users/davidfisher/Code/GeneralAssembly/enumerable_lab/spec"
+	],
+	"file_history":
+	[
+		"/Users/davidfisher/Library/Application Support/Sublime Text 3/Packages/User/rspec.sublime-build",
+		"/Users/davidfisher/Code/GeneralAssembly/enumerable_lab/spec/nested_spec.rb",
+		"/Users/davidfisher/Code/GeneralAssembly/enumerable_lab/lib/enum/nested.rb",
+		"/Users/davidfisher/Code/GeneralAssembly/enumerable_lab/lib/enum.rb",
+		"/Users/davidfisher/Code/GeneralAssembly/enumerable_lab/lib/enum/arrays.rb",
+		"/Users/davidfisher/Code/GeneralAssembly/enumerable_lab/spec/arrays_spec.rb",
+		"/Users/davidfisher/Code/adventure/lib/adventure/game.rb",
+		"/Users/davidfisher/Code/adventure/Gemfile",
+		"/Users/davidfisher/Code/adventure/spec/spec_helper.rb",
+		"/Users/davidfisher/Code/adventure/Guardfile",
+		"/Users/davidfisher/Code/adventure/spec/adventure/parser_spec.rb",
+		"/Users/davidfisher/Code/adventure/.git/COMMIT_EDITMSG",
+		"/Users/davidfisher/Code/adventure/lib/adventure/player.rb",
+		"/Users/davidfisher/Code/adventure/play.rb",
+		"/Users/davidfisher/Code/adventure/lib/adventure/parser.rb",
+		"/Users/davidfisher/Code/adventure/lib/adventure.rb",
+		"/Users/davidfisher/Code/adventure/coverage/index.html",
+		"/Users/davidfisher/Code/adventure/spec/adventure/item_spec.rb",
+		"/Users/davidfisher/Code/adventure/spec/adventure/world_spec.rb",
+		"/Users/davidfisher/Code/adventure/spec/adventure/room_spec.rb",
+		"/Users/davidfisher/Code/adventure/spec/adventure/monster_spec.rb",
+		"/Users/davidfisher/Code/adventure/lib/adventure/monster.rb",
+		"/Users/davidfisher/Code/adventure/lib/adventure/world.rb",
+		"/Users/davidfisher/Code/adventure/lib/adventure/item.rb",
+		"/Users/davidfisher/Code/adventure/lib/adventure/room.rb",
+		"/Users/davidfisher/Code/adventure/spec/adventure/player_spec.rb",
+		"/Users/davidfisher/Code/adventure/spec/adventure/game_spec.rb",
+		"/Users/davidfisher/Code/adventure/coverage/assets/0.8.0/application.js",
+		"/Users/davidfisher/Code/GeneralAssembly/boston_fall_2014/blogDemo/.git/COMMIT_EDITMSG",
+		"/Users/davidfisher/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/davidfisher/.floorc",
+		"/Users/davidfisher/.floorc.json"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ruby",
+			"years_programming_experience: 3",
+			"self.",
+			"array_lab",
+			"array",
+			"10",
+			"ajoining_room",
+			"agro_monsters",
+			"expects",
+			"monster",
+			"i"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 66,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								41,
+								41
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "spec/nested_spec.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2701,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1371,
+								1371
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 144.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								155,
+								155
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "lib/enum/nested.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								375,
+								375
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 146.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "enum.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"neste",
+				"lib/enum/nested.rb"
+			],
+			[
+				"helpe",
+				"spec/spec_helper.rb"
+			],
+			[
+				"game_sp",
+				"spec/adventure/game_spec.rb"
+			],
+			[
+				"parser",
+				"lib/adventure/parser.rb"
+			],
+			[
+				"itme",
+				"spec/adventure/item_spec.rb"
+			],
+			[
+				"world",
+				"lib/adventure/world.rb"
+			],
+			[
+				"roomsp",
+				"spec/adventure/room_spec.rb"
+			],
+			[
+				"worl",
+				"lib/adventure/world.rb"
+			],
+			[
+				"item",
+				"lib/adventure/item.rb"
+			],
+			[
+				"room",
+				"lib/adventure/room.rb"
+			],
+			[
+				"guar",
+				"Guardfile"
+			],
+			[
+				"helper",
+				"spec/spec_helper.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 208.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
