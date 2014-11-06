@@ -9,8 +9,6 @@ class MyEnumeration
   end
 
 
-
-
   # Refer to: all?
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-all-3F
   def all_words_long_than_length?(min_length)
@@ -45,7 +43,6 @@ class MyEnumeration
   end
 
 
-
   # Refer to count
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-count
   def number_elements_in_collection
@@ -60,6 +57,18 @@ class MyEnumeration
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-detect
   def find_first_awesome_person
     collection.detect{|person| person[:awesome]}
+  end
+
+  # Refer to drop
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-drop
+  def remove_first_three
+    collection.drop(3)
+  end
+
+  # Refer to drop_while
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-drop_while
+  def drop_until_its_hot
+    collection.drop_while{|element| element != 'hot'}
   end
 
 

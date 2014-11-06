@@ -92,4 +92,23 @@ RSpec.describe MyEnumeration do
       expect(my_enum.find_first_awesome_person[:name]).to eq "Chris"
     end
   end
+
+
+  # Refer to drop
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-drop
+  describe '#remove_first_three' do
+    it 'returns an array without the first three elements' do
+      my_enum = MyEnumeration.new ['Anna', 'David', 'Chris', 'Dan', 'Tom']
+      expect(my_enum.remove_first_three).to eq ['Dan', 'Tom']
+    end
+  end
+
+  # Refer to drop_while
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-drop_while
+  describe '#drop_until_its_hot' do
+    it 'removes items from the array until its finds hot' do
+      my_enum = MyEnumeration.new(['mild', 'cool', 'hot', 'medium', 'chilly'])
+      expect(my_enum.drop_until_its_hot).to eq ['hot', 'medium', 'chilly']
+    end
+  end
 end
