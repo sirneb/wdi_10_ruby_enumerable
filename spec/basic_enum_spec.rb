@@ -122,4 +122,17 @@ RSpec.describe MyEnumeration do
       expect(my_enum.groups_of(4)).to eq [["Anna", "David", "Chris", "Kate"], ["Dan", "Tom", "Karen", "Emily"], ["Dannie", "Kel"]]
     end
   end
+
+  # Refer to each_with_object
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-each_with_object
+  describe '#element_frequency_count' do
+    it 'returns a hash of the frequency count of the words in an array' do
+
+      my_enum = MyEnumeration.new(['buffalo', 'buffalo', 'buffalo', 'buffalo', 'cat', 'cat', 'dog', 2, 2, :foo, :foo])
+
+      results = {'buffalo' => 4, 'cat' => 2, 'dog' => 1, 2 => 2, :foo => 2}
+
+      expect(my_enum.element_frequency_count).to eq results
+    end
+  end
 end

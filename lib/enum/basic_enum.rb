@@ -79,6 +79,14 @@ class MyEnumeration
     collection.each_slice(num).to_a
   end
 
+
+  # Refer to each_with_object
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-each_with_object
+  # Tip: You'll have to do .each_with_object(Hash.new(0)) to create a hash to start with. Do not save the hash in a variable. You may use the incrementor method here.
+  def element_frequency_count
+    collection.each_with_object(Hash.new(0)) {|element, hash| hash[element] += 1 }
+  end
+
   private
 
   def collection
