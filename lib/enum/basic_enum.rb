@@ -87,6 +87,14 @@ class MyEnumeration
     collection.each_with_object(Hash.new(0)) {|element, hash| hash[element] += 1 }
   end
 
+
+  # Refer to find_all / select
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-find-all
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-select
+  def elements_ending_in_er
+    collection.select {|element| element[-2..-1] == 'er' }
+  end
+
   private
 
   def collection

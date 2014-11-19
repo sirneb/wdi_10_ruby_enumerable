@@ -86,6 +86,7 @@ RSpec.describe MyEnumeration do
 
   # Refer to detect or find
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-detect
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-find
   describe '#find_first_awesome_person' do
     it 'returns the first person who is awesome' do
       my_enum = MyEnumeration.new([{name: "JohnDoe", awesome: false}, {name: "Chris", awesome: true}, {name: "Anna", awesome: true}])
@@ -133,6 +134,16 @@ RSpec.describe MyEnumeration do
       results = {'buffalo' => 4, 'cat' => 2, 'dog' => 1, 2 => 2, :foo => 2}
 
       expect(my_enum.element_frequency_count).to eq results
+    end
+  end
+
+  # Refer to find_all / select
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-find-all
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-select
+  describe '#strings_ending_in_er' do
+    it 'returns an array of strings ending in er' do
+      my_enum = MyEnumeration.new ['fitter', 'happier', 'more', 'productive', 'a', 'patient', 'better', 'driver']
+      expect(my_enum.elements_ending_in_er).to eq ['fitter', 'happier', 'better', 'driver']
     end
   end
 end
