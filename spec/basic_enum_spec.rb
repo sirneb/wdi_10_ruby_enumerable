@@ -140,10 +140,20 @@ RSpec.describe MyEnumeration do
   # Refer to find_all / select
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-find-all
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-select
-  describe '#strings_ending_in_er' do
+  describe '#elements_ending_in_er' do
     it 'returns an array of strings ending in er' do
       my_enum = MyEnumeration.new ['fitter', 'happier', 'more', 'productive', 'a', 'patient', 'better', 'driver']
       expect(my_enum.elements_ending_in_er).to eq ['fitter', 'happier', 'better', 'driver']
+    end
+  end
+
+
+  # Refer to find_index
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-find-index
+  describe '#index_of_first_awesome_element' do
+    it 'returns an index of the first awesome person' do
+      my_enum = MyEnumeration.new([{name: "JohnDoe", awesome: false}, {name: "Chris", awesome: true}, {name: "Anna", awesome: true}])
+      expect(my_enum.index_of_first_awesome_element).to eq 1
     end
   end
 end

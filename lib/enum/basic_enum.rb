@@ -95,6 +95,13 @@ class MyEnumeration
     collection.select {|element| element[-2..-1] == 'er' }
   end
 
+
+  # Refer to find_index
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-find-index
+  def index_of_first_awesome_element
+    collection.find_index {|element| element[:awesome] }
+  end
+
   private
 
   def collection
