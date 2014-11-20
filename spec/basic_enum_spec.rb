@@ -5,10 +5,10 @@ RSpec.describe MyEnumeration do
 
   # Refer to count
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-count
-  describe '#number_elements_in_collection' do
+  describe '#number_of_elements_in_collection' do
     it 'returns the number of elements in a collection' do
       my_enum = MyEnumeration.new([2, 4, 10, -22])
-      expect(my_enum.number_elements_in_collection).to eq 4
+      expect(my_enum.number_of_elements_in_collection).to eq 4
     end
   end
 
@@ -201,7 +201,7 @@ RSpec.describe MyEnumeration do
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-inject
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-reduce
   describe '#longest_element_name_using_inject' do
-    it 'returns an index of the first awesome person' do
+    it 'returns the person element with the longest name' do
       my_enum = MyEnumeration.new([ {name: "Rich", years_experience: 5},
                                     {name: "Catherine", years_experience: 2},
                                     {name: "Anna", years_experience: 8},
@@ -215,7 +215,7 @@ RSpec.describe MyEnumeration do
   # Refer to max_by
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-max-by
   describe '#most_experienced_element' do
-    it 'returns an index of the first awesome person' do
+    it 'returns the person element with the most years experience' do
       my_enum = MyEnumeration.new([ {name: "Rich", years_experience: 5},
                                     {name: "Catherine", years_experience: 2},
                                     {name: "Anna", years_experience: 8},

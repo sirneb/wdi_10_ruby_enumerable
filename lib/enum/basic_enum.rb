@@ -13,7 +13,7 @@ class MyEnumeration
   # EXAMPLE: THIS ONE IS DONE FOR YOU
   # Refer to count
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-count
-  def number_elements_in_collection
+  def number_of_elements_in_collection
     # collection here refers to the collection that is set with the initialize method
     # collection() is a private accessor method at the bottom of this class that accesses @collection
     collection.count
