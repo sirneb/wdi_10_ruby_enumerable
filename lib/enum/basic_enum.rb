@@ -153,6 +153,13 @@ class MyEnumeration
     collection.reject {|element| element[:likes_functional_programming] }
   end
 
+  # Refer to sort
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-sort
+  # You will need to use the 'spaceship' operator <=>
+  def elements_sorted_by_experience
+    collection.sort {|prior_element, next_element| prior_element[:years_experience] <=> next_element[:years_experience]}
+  end
+
   private
 
   def collection

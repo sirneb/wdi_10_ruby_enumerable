@@ -294,4 +294,23 @@ RSpec.describe MyEnumeration do
     end
   end
 
+  # Refer to sort
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-sort
+  # You will need to use the 'spaceship' operator <=>
+  describe '#elements_sorted_by_experience' do
+    it 'returns an array of elements with longest and shortest names' do
+      my_enum = MyEnumeration.new([ {name: "Rich", years_experience: 5},
+                                    {name: "Catherine", years_experience: 2},
+                                    {name: "Anna", years_experience: 8},
+                                    {name: "Ki", years_experience: 4},
+                                    {name: "Salamar", years_experience: 1}])
+      expected_result = [ {name: "Salamar", years_experience: 1},
+                          {name: "Catherine", years_experience: 2},
+                          {name: "Ki", years_experience: 4},
+                          {name: "Rich", years_experience: 5},
+                          {name: "Anna", years_experience: 8}]
+      expect(my_enum.elements_sorted_by_experience).to eq expected_result
+    end
+  end
+
 end
