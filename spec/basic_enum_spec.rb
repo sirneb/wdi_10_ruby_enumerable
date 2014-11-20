@@ -12,25 +12,25 @@ RSpec.describe MyEnumeration do
     end
   end
 
-  describe '#instances_of_numerics' do
+  describe '#number_of_floats_or_fixnums' do
     it 'returns the number of elements that are Float or Fixnums' do
       my_enum = MyEnumeration.new([1, 2, 'Buckle my shoe', 3, 4, 'Close the door', true, 5, 6, 'pickup sticks', 3.14])
-      expect(my_enum.instances_of_numerics).to eq 7
+      expect(my_enum.number_of_floats_or_fixnums).to eq 7
     end
   end
 
   # Refer to: all?
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-all-3F
-  describe '#all_words_long_than_length?' do
+  describe '#all_words_longer_than_length?' do
     it 'returns true if all the words in the collection are more than x characters long' do
       my_enum = MyEnumeration.new(["coffee", "tea", "apple", "television"])
-      expect(my_enum.all_words_long_than_length?(1)).to be true
-      expect(my_enum.all_words_long_than_length?(2)).to be true
-      expect(my_enum.all_words_long_than_length?(3)).to be false
-      expect(my_enum.all_words_long_than_length?(4)).to be false
-      expect(my_enum.all_words_long_than_length?(6)).to be false
-      expect(my_enum.all_words_long_than_length?(7)).to be false
-      expect(my_enum.all_words_long_than_length?(8)).to be false
+      expect(my_enum.all_words_longer_than_length?(1)).to be true
+      expect(my_enum.all_words_longer_than_length?(2)).to be true
+      expect(my_enum.all_words_longer_than_length?(3)).to be false
+      expect(my_enum.all_words_longer_than_length?(4)).to be false
+      expect(my_enum.all_words_longer_than_length?(6)).to be false
+      expect(my_enum.all_words_longer_than_length?(7)).to be false
+      expect(my_enum.all_words_longer_than_length?(8)).to be false
     end
   end
 

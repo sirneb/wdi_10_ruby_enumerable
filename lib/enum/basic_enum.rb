@@ -21,12 +21,12 @@ class MyEnumeration
 
   # This one also uses 'count'
   # Try it yourself!
-  def instances_of_numerics
+  def number_of_floats_or_fixnums
   end
 
   # Refer to: all?
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-all-3F
-  def all_words_long_than_length?(min_length)
+  def all_words_longer_than_length?(min_length)
   end
 
 
