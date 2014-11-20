@@ -3,6 +3,22 @@ require_relative '../lib/enum'
 
 RSpec.describe MyEnumeration do
 
+  # Refer to count
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-count
+  describe '#number_elements_in_collection' do
+    it 'returns the number of elements in a collection' do
+      my_enum = MyEnumeration.new([2, 4, 10, -22])
+      expect(my_enum.number_elements_in_collection).to eq 4
+    end
+  end
+
+  describe '#instances_of_numerics' do
+    it 'returns the number of elements that are Float or Fixnums' do
+      my_enum = MyEnumeration.new([1, 2, 'Buckle my shoe', 3, 4, 'Close the door', true, 5, 6, 'pickup sticks', 3.14])
+      expect(my_enum.instances_of_numerics).to eq 7
+    end
+  end
+
   # Refer to: all?
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-all-3F
   describe '#all_words_long_than_length?' do
@@ -65,22 +81,6 @@ RSpec.describe MyEnumeration do
     it 'returns all numbers as both positive and negative ' do
       my_enum = MyEnumeration.new([2, 4, 10, -22])
       expect(my_enum.positive_and_negative_numbers).to eq [2, -2, 4, -4, 10, -10, 22, -22]
-    end
-  end
-
-  # Refer to count
-  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-count
-  describe '#number_elements_in_collection' do
-    it 'returns the number of elements in a collection' do
-      my_enum = MyEnumeration.new([2, 4, 10, -22])
-      expect(my_enum.number_elements_in_collection).to eq 4
-    end
-  end
-
-  describe '#instances_of_numerics' do
-    it 'returns the number of elements that are Float or Fixnums' do
-      my_enum = MyEnumeration.new([1, 2, 'Buckle my shoe', 3, 4, 'Close the door', true, 5, 6, 'pickup sticks', 3.14])
-      expect(my_enum.instances_of_numerics).to eq 7
     end
   end
 
