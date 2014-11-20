@@ -160,6 +160,10 @@ class MyEnumeration
     collection.sort {|prior_element, next_element| prior_element[:years_experience] <=> next_element[:years_experience]}
   end
 
+  def first_x_elements(x)
+    collection.take(x)
+  end
+
   private
 
   def collection

@@ -313,4 +313,20 @@ RSpec.describe MyEnumeration do
     end
   end
 
+  # Refer to take
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-take
+  describe '#first_x_elements' do
+    it 'returns an array of elements with longest and shortest names' do
+      my_enum = MyEnumeration.new([ {name: "Rich", years_experience: 5},
+                                    {name: "Catherine", years_experience: 2},
+                                    {name: "Anna", years_experience: 8},
+                                    {name: "Ki", years_experience: 4},
+                                    {name: "Salamar", years_experience: 1}])
+      expected_result = [ {name: "Rich", years_experience: 5},
+                          {name: "Catherine", years_experience: 2}]
+      expect(my_enum.first_x_elements(0)).to eq []
+      expect(my_enum.first_x_elements(2)).to eq expected_result
+    end
+  end
+
 end
