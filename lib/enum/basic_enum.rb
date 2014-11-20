@@ -108,14 +108,16 @@ class MyEnumeration
     collection.group_by {|element| element[:favorite_language]}
   end
 
-  # Refer to inject
+  # Refer to inject / reduce
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-inject
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-reduce
   def sum_of_experiences
     collection.inject(0) {|sum, element| sum + element[:years_experience] }
   end
 
-  # Refer to inject
+  # Refer to inject / reduce
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-inject
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-reduce
   def longest_element
     collection.inject {|longest, element| longest[:name].length > element[:name].length ? longest : element }
   end

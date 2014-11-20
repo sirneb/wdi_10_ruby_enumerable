@@ -183,8 +183,9 @@ RSpec.describe MyEnumeration do
     end
   end
 
-  # Refer to inject
+  # Refer to inject / reduce
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-inject
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-reduce
   describe '#sum_of_experiences' do
     it 'returns an index of the first awesome person' do
       my_enum = MyEnumeration.new([ {name: "JohnDoe", years_experience: 5},
@@ -195,8 +196,9 @@ RSpec.describe MyEnumeration do
     end
   end
 
-  # Refer to inject
+  # Refer to inject /reduce
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-inject
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-reduce
   describe '#longest_element' do
     it 'returns an index of the first awesome person' do
       my_enum = MyEnumeration.new([ {name: "Rich", years_experience: 5},
