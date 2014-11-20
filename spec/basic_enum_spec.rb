@@ -187,7 +187,7 @@ RSpec.describe MyEnumeration do
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-inject
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-reduce
   describe '#sum_of_experiences' do
-    it 'returns an index of the first awesome person' do
+    it 'returns an Fixnum sum of experiences' do
       my_enum = MyEnumeration.new([ {name: "JohnDoe", years_experience: 5},
                                     {name: "Chris", years_experience: 2},
                                     {name: "Anna", years_experience: 8},
@@ -199,15 +199,46 @@ RSpec.describe MyEnumeration do
   # Refer to inject /reduce
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-inject
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-reduce
-  describe '#longest_element' do
+  describe '#longest_element_name_using_inject' do
     it 'returns an index of the first awesome person' do
       my_enum = MyEnumeration.new([ {name: "Rich", years_experience: 5},
                                     {name: "Catherine", years_experience: 2},
                                     {name: "Anna", years_experience: 8},
                                     {name: "Ki", years_experience: 4},
                                     {name: "Salamar", years_experience: 1}])
-      expect(my_enum.longest_element).to eq ({name: "Catherine", years_experience: 2})
+      expect(my_enum.longest_element_name_using_inject).to eq ({name: "Catherine", years_experience: 2})
     end
   end
+
+
+  # Refer to max_by
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-max-by
+  describe '#most_experienced_element' do
+    it 'returns an index of the first awesome person' do
+      my_enum = MyEnumeration.new([ {name: "Rich", years_experience: 5},
+                                    {name: "Catherine", years_experience: 2},
+                                    {name: "Anna", years_experience: 8},
+                                    {name: "Ki", years_experience: 4},
+                                    {name: "Salamar", years_experience: 1}])
+      expect(my_enum.most_experienced_element).to eq ({name: "Anna", years_experience: 8})
+    end
+  end
+
+
+  # Refer to max_by
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-max-by
+  describe '#element_present?' do
+    it 'returns an index of the first awesome person' do
+      my_enum = MyEnumeration.new(['Anna', 'David', 'Chris', 'Kate', 'Dan', 'Tom', 'Karen', 'Emily', 'Dannie', 'Kel'])
+      expect(my_enum.element_present?('Anna')).to eq true
+      expect(my_enum.element_present?('Sarah')).to eq false
+      expect(my_enum.element_present?('D')).to eq false
+      expect(my_enum.element_present?('Kel')).to eq true
+    end
+  end
+
+
+
+
 
 end
