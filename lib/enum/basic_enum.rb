@@ -160,6 +160,8 @@ class MyEnumeration
     collection.sort {|prior_element, next_element| prior_element[:years_experience] <=> next_element[:years_experience]}
   end
 
+  # Refer to take
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-take
   def first_x_elements(x)
     collection.take(x)
   end
