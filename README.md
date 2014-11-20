@@ -4,15 +4,18 @@
 
 - Fork & clone this repo. When you are done with the lab, make a pull request.
 - Run `bundle install` to ensure you have Rspec properly installed.
+- Run rspec test by running `rspec spec/basic_enum_spec.rb`
+- Following the below rules, edit the `lib/enum/basic_enum.rb` to make the tests pass
+- Move on to the `spec/arrays_spec.rb` and `spec/nested_spec.rb` tests
 
-Following the below rules, test drive the `lib/enum/basic_enum.rb` file by running `rspec` from the terminal. The tests, which are given, are in `spec/basic_enum_spec.rb`. **Do not modify the tests**. Answer the prompts using the methods linked to in the comments (there maybe be additional methods that you need as well). All of the `basic_enum` ones can be done in a single line.
+If you hit one that's too hard, you can skip and move onto the next one and come back.
 
-Then move on to the `lib/enum/arrays.rb` and `lib/enum/nested.rb` files and test drive those as well. Those files don't have hints as to what methods to use!
-
+In the `rspec spec/basic_enum_spec.rb` there are links to documentation that maps almost directly to each problem.
 
 ## Rules
 
-- Do not assign any variables
+- Do not assign *any* variables
+- Do not modify the function declarations themselves; they already have the proper arguments and names needed there to make the tests pass.
 - Do not use the `.each` method unless specifically told to do such
 - Do not user a `for` loop
 - Do not modify the tests
