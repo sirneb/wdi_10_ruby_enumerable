@@ -135,6 +135,12 @@ class MyEnumeration
     collection.include?(name)
   end
 
+  # Refer to minmax_by
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-minmax_by
+  def elements_with_longest_and_shortest_names
+    collection.minmax_by {|element| element[:name].length }
+  end
+
   private
 
   def collection

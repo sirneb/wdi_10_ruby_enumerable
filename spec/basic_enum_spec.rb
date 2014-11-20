@@ -237,6 +237,18 @@ RSpec.describe MyEnumeration do
     end
   end
 
+  # Refer to minmax_by
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-minmax_by
+  describe '#elements_with_longest_and_shortest_names' do
+    it 'returns an index of the first awesome person' do
+      my_enum = MyEnumeration.new([ {name: "Rich", years_experience: 5},
+                                    {name: "Catherine", years_experience: 2},
+                                    {name: "Anna", years_experience: 8},
+                                    {name: "Ki", years_experience: 4},
+                                    {name: "Salamar", years_experience: 1}])
+      expect(my_enum.elements_with_longest_and_shortest_names).to eq [{name: "Ki", years_experience: 4}, {name: "Catherine", years_experience: 2} ]
+    end
+  end
 
 
 
