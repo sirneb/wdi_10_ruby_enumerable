@@ -23,7 +23,7 @@ RSpec.describe MyEnumeration do
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-all-3F
   describe '#all_words_long_than_length?' do
     it 'returns true if all the words in the collection are more than x characters long' do
-      my_enum = MyEnumeration.new(%w[coffee tea apple television])
+      my_enum = MyEnumeration.new(["coffee", "tea", "apple", "television"])
       expect(my_enum.all_words_long_than_length?(1)).to be true
       expect(my_enum.all_words_long_than_length?(2)).to be true
       expect(my_enum.all_words_long_than_length?(3)).to be false
@@ -38,7 +38,7 @@ RSpec.describe MyEnumeration do
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-any-3F
   describe '#contains_a_word_longer_than?' do
     it 'returns true if any word is longer than x characters' do
-      my_enum = MyEnumeration.new(%w[coffee tea apple television])
+      my_enum = MyEnumeration.new(["coffee", "tea", "apple", "television"])
       expect(my_enum.contains_a_word_longer_than?(1)).to be true
       expect(my_enum.contains_a_word_longer_than?(2)).to be true
       expect(my_enum.contains_a_word_longer_than?(3)).to be true
@@ -56,7 +56,7 @@ RSpec.describe MyEnumeration do
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-map
   describe '#capitalize_words' do
     it 'capitalizes all words in the collection' do
-      my_enum = MyEnumeration.new(%w[coffee tea apple television])
+      my_enum = MyEnumeration.new(["coffee", "tea", "apple", "television"])
       expect(my_enum.capitalize_words).to eq %w[Coffee Tea Apple Television]
     end
   end
@@ -70,7 +70,7 @@ RSpec.describe MyEnumeration do
 
   describe '#reverse_words' do
     it 'reverses all words in the collection' do
-      my_enum = MyEnumeration.new(%w[coffee tea apple television])
+      my_enum = MyEnumeration.new(["coffee", "tea", "apple", "television"])
       expect(my_enum.reverse_words).to eq ["eeffoc", "aet", "elppa", "noisivelet"]
     end
   end
