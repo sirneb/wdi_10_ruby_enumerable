@@ -4,6 +4,8 @@
 # The name is close, but this is just us writing implementation of all of the enumerable methods in actions
 class MyEnumeration
   # Do not modify the intialize
+  # This statement allows the rspec tests to create a new collection that will then be tested
+  # MyEnumeration.new(['foo', 'bar'])
   def initialize(collection)
     @collection = collection
   end
@@ -12,6 +14,8 @@ class MyEnumeration
   # Refer to count
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-count
   def number_elements_in_collection
+    # collection here refers to the collection that is set with the initialize method
+    # collection() is a private accessor method at the bottom of this class that accesses @collection
     collection.count
   end
 
