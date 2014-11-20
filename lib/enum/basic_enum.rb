@@ -1,6 +1,6 @@
 # Basic enumeration on collection objects (hash, array)
 
-# This is NOT the Enumberable module.
+# This is NOT the Enumerable module.
 # The name is close, but this is just us writing implementation of all of the enumerable methods in actions
 class MyEnumeration
   # Do not modify the intialize
