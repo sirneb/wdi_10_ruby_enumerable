@@ -3,7 +3,7 @@
 # This is NOT the Enumerable module.
 # The name is close, but this is just us writing implementation of all of the enumerable methods in actions
 class MyEnumeration
-  # Do not modify the intialize
+  # Do not modify the initialize
   # This statement allows the rspec tests to create a new collection that will then be tested
   # MyEnumeration.new(['foo', 'bar'])
   def initialize(collection)
