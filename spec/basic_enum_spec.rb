@@ -77,6 +77,7 @@ RSpec.describe MyEnumeration do
 
   # Refer to collect_concat or flat_map
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-flat_map
+  # To get the order right for the tests, you'll need to use the absolute value method
   describe '#positive_and_negative_numbers' do
     it 'returns all numbers as both positive and negative ' do
       my_enum = MyEnumeration.new([2, 4, 10, -22])

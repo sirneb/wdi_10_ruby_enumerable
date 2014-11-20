@@ -47,6 +47,7 @@ class MyEnumeration
 
   # Refer to collect_concat or flat_map for these next two
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-flat_map
+  # To get the order right for the tests, you'll need to use the absolute value method
   def positive_and_negative_numbers
   end
 
