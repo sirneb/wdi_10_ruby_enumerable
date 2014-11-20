@@ -228,7 +228,7 @@ RSpec.describe MyEnumeration do
   # Refer to max_by
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-max-by
   describe '#element_present?' do
-    it 'returns an index of the first awesome person' do
+    it 'returns true if the element is present in the collection' do
       my_enum = MyEnumeration.new(['Anna', 'David', 'Chris', 'Kate', 'Dan', 'Tom', 'Karen', 'Emily', 'Dannie', 'Kel'])
       expect(my_enum.element_present?('Anna')).to eq true
       expect(my_enum.element_present?('Sarah')).to eq false
@@ -240,7 +240,7 @@ RSpec.describe MyEnumeration do
   # Refer to minmax_by
   # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-minmax_by
   describe '#elements_with_longest_and_shortest_names' do
-    it 'returns an index of the first awesome person' do
+    it 'returns an array of elements with longest and shortest names' do
       my_enum = MyEnumeration.new([ {name: "Rich", years_experience: 5},
                                     {name: "Catherine", years_experience: 2},
                                     {name: "Anna", years_experience: 8},
@@ -251,6 +251,47 @@ RSpec.describe MyEnumeration do
   end
 
 
+  # Refer to partition
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-partition
+  describe '#separate_elements_that_like_functional_programming_from_rest' do
+    it 'returns an array splitting up elements that like functional programming vs those who don\'t' do
+      my_enum = MyEnumeration.new([ {name: "Rich", likes_functional_programming: true},
+                                    {name: "Catherine", likes_functional_programming: true},
+                                    {name: "Anna", likes_functional_programming: false},
+                                    {name: "Ki", likes_functional_programming: true},
+                                    {name: "Salamar", likes_functional_programming: false}])
+      expected_result = [
+                          [
+                            {name: "Rich", likes_functional_programming: true},
+                            {name: "Catherine", likes_functional_programming: true},
+                            {name: "Ki", likes_functional_programming: true}],
+                          [
+                            {name: "Anna", likes_functional_programming: false},
+                            {name: "Salamar", likes_functional_programming: false}
+                          ]
+                        ]
 
+      expect(my_enum.separate_elements_that_like_functional_programming_from_rest).to eq expected_result
+    end
+  end
+
+
+  # Refer to reject
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-reject
+  describe '#elements_who_dislike_functional_programming' do
+    it 'returns an array of elements who do not like functional programming' do
+      my_enum = MyEnumeration.new([ {name: "Rich", likes_functional_programming: true},
+                                    {name: "Catherine", likes_functional_programming: true},
+                                    {name: "Anna", likes_functional_programming: false},
+                                    {name: "Ki", likes_functional_programming: true},
+                                    {name: "Salamar", likes_functional_programming: false}])
+      expected_result = [
+                          {name: "Anna", likes_functional_programming: false},
+                          {name: "Salamar", likes_functional_programming: false}
+                        ]
+
+      expect(my_enum.elements_who_dislike_functional_programming).to eq expected_result
+    end
+  end
 
 end

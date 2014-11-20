@@ -141,6 +141,18 @@ class MyEnumeration
     collection.minmax_by {|element| element[:name].length }
   end
 
+  # Refer to partition
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-partition
+  def separate_elements_that_like_functional_programming_from_rest
+    collection.partition {|element| element[:likes_functional_programming] }
+  end
+
+  # Refer to reject
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-reject
+  def elements_who_dislike_functional_programming
+    collection.reject {|element| element[:likes_functional_programming] }
+  end
+
   private
 
   def collection
