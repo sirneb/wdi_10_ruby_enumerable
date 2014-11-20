@@ -156,4 +156,56 @@ RSpec.describe MyEnumeration do
       expect(my_enum.index_of_first_awesome_element).to eq 1
     end
   end
+
+  # Refer to group_by
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-group-by
+  describe '#group_elements_by_favorite_language' do
+    it 'returns a hash of favorite languages as keys, and hashes of who like them as elements' do
+      my_enum = MyEnumeration.new([ {name: "Kelly", favorite_language: :ruby},
+                                    {name: "Chris", favorite_language: :javascript},
+                                    {name: "Kim", favorite_language: :ruby},
+                                    {name: "Dan", favorite_language: :haskell},
+                                    {name: "Martin", favorite_language: :javascript},
+                                    {name: "Ki", favorite_language: :haskell},
+                                    {name: "Anna", favorite_language: :ruby}])
+      expected_result = {
+                         ruby:      [
+                                    {name: "Kelly", favorite_language: :ruby},
+                                    {name: "Kim", favorite_language: :ruby},
+                                    {name: "Anna", favorite_language: :ruby}],
+                        javascript: [
+                                    {name: "Chris", favorite_language: :javascript},
+                                    {name: "Martin", favorite_language: :javascript}],
+                        haskell:    [
+                                    {name: "Dan", favorite_language: :haskell},
+                                    {name: "Ki", favorite_language: :haskell}]}
+      expect(my_enum.group_elements_by_favorite_language).to eq expected_result
+    end
+  end
+
+  # Refer to inject
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-inject
+  describe '#sum_of_experiences' do
+    it 'returns an index of the first awesome person' do
+      my_enum = MyEnumeration.new([ {name: "JohnDoe", years_experience: 5},
+                                    {name: "Chris", years_experience: 2},
+                                    {name: "Anna", years_experience: 8},
+                                    {name: "Ki", years_experience: 4}])
+      expect(my_enum.sum_of_experiences).to eq 19
+    end
+  end
+
+  # Refer to inject
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-inject
+  describe '#longest_element' do
+    it 'returns an index of the first awesome person' do
+      my_enum = MyEnumeration.new([ {name: "Rich", years_experience: 5},
+                                    {name: "Catherine", years_experience: 2},
+                                    {name: "Anna", years_experience: 8},
+                                    {name: "Ki", years_experience: 4},
+                                    {name: "Salamar", years_experience: 1}])
+      expect(my_enum.longest_element).to eq ({name: "Catherine", years_experience: 2})
+    end
+  end
+
 end

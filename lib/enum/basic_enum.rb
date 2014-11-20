@@ -102,6 +102,24 @@ class MyEnumeration
     collection.find_index {|element| element[:awesome] }
   end
 
+  # Refer to group_by
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-group-by
+  def group_elements_by_favorite_language
+    collection.group_by {|element| element[:favorite_language]}
+  end
+
+  # Refer to inject
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-inject
+  def sum_of_experiences
+    collection.inject(0) {|sum, element| sum + element[:years_experience] }
+  end
+
+  # Refer to inject
+  # http://ruby-doc.org/core-2.1.4/Enumerable.html#method-i-inject
+  def longest_element
+    collection.inject {|longest, element| longest[:name].length > element[:name].length ? longest : element }
+  end
+
   private
 
   def collection
