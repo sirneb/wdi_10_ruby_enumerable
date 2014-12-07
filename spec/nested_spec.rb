@@ -49,4 +49,12 @@ RSpec.describe People do
     end
   end
 
+  describe '#person_with_most_experience_in_language' do
+    it 'returns the person with most experience in a language' do
+      expect(@people.person_with_most_experience_in_language(:ruby).name).to eq "Jamal"
+      expect(@people.person_with_most_experience_in_language(:perl).name).to eq "Chris"
+      expect(@people.person_with_most_experience_in_language(:javascript).name).to eq "Kee"
+    end
+  end
+
 end
